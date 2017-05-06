@@ -1,7 +1,7 @@
 /**
  * Created by nisha on 5/5/2017.
  */
-let firstName   = document.getElementsByName("firstname"),
+/*let firstName   = document.getElementsByName("firstname"),
     lastName   = document.getElementsByName("lastname"),
     gender   = document.getElementsByName("gender"),
     weight   = document.getElementsByName("weight"),
@@ -23,7 +23,7 @@ let inputData={
             "age": "24",
             "waist": "34.00",
             "hip": "40.00"
-        }
+        }*/
 $(document).ready(function(){
     $("submit").click(function(){
         $.post("https://bmi.p.mashape.com/",
@@ -40,8 +40,8 @@ $(document).ready(function(){
                 "age": "24",
                 "waist": "34.00",
                 "hip": "40.00"
-            }
+            },
             function(data, status){
                 alert("Data: " + data + "\nStatus: " + status);
             });
-    });
+    })
