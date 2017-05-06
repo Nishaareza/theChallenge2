@@ -24,3 +24,24 @@ let inputData={
             "waist": "34.00",
             "hip": "40.00"
         }
+$(document).ready(function(){
+    $("submit").click(function(){
+        $.post("https://bmi.p.mashape.com/",
+            {
+                "weight": {
+                    "value": "85",
+                    "unit": "kg"
+                },
+                "height": {
+                    "value": "170.00",
+                    "unit": "cm"
+                },
+                "sex": "m",
+                "age": "24",
+                "waist": "34.00",
+                "hip": "40.00"
+            }
+            function(data, status){
+                alert("Data: " + data + "\nStatus: " + status);
+            });
+    });
